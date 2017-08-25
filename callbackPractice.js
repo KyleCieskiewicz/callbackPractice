@@ -23,7 +23,9 @@ and what you should write is the sayHi function that makes the code above work,
 // 1. Write a function called first that returns the first item of the array using a callback function
 
   // Code Here
-
+function first(names, firstName) {
+  return firstName(names[0]);
+}
   
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 first(names, function(firstName){
@@ -36,7 +38,9 @@ first(names, function(firstName){
 // 2. Write a function called last which returns the last item of the array using a callback function.
 
   //Code Here
-
+function last(names, lastName) {
+  return lastName(names[names.length - 1]);
+}
 
 
 last(names, function(lastName){
@@ -49,7 +53,9 @@ last(names, function(lastName){
 // 3. Write a function called multiply that multiplies two numbers. Invoke the callback with the result of the multiplication. 
 
   //Code Here
-
+function multiply(one, two, answer) {
+  return answer(one * two);
+}
 
 
 multiply(4, 3, function(answer){
