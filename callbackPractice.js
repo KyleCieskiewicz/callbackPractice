@@ -93,18 +93,16 @@ function contains(arr, names, callback) {
   // Invoke the callback with the modified array as an argument.
   
     //Code Here
-  function uniq(names, callback) {
-    for (var i = 0; i < names.length; i++) {
-      for ( var p = 0; p < names.length; p++) {
-        if (names[i] === names[p]) {
-          names.slice(p-1);
-        }
-      }
-      callback(names);
+    function uniq(arrayy, func){
+      copy = [];
+      arrayy.map(function(x){
+        if(copy.indexOf(x) === -1){
+          copy.push(x);
+        } //if the name isn't in copy array, then push it into copy array
+    
+      });
+      return func(copy);
     }
-    
-    
-  }
   
   
   uniq(names, function(uniqArr){
